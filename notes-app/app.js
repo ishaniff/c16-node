@@ -6,4 +6,12 @@ console.log(getNotes());
 
 const chalk = require("chalk");
 const log = console.log;
-log(chalk.green.bgBlue.bold("success"));
+// log(chalk.green.inverse.bold("success"));
+
+if (validator.isEmail("bob@bob.com")) {
+  log(chalk.green.inverse.bold("success"));
+} else {
+  log(chalk.red.inverse.bold("invalid"));
+}
+
+console.log(process.argv[2]);
